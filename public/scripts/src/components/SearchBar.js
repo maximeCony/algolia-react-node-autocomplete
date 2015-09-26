@@ -2,6 +2,6 @@ import React from 'react';
 
 export default class SearchBar extends React.Component {
   render() {
-    return (<div>Search Bar</div>);
+    return <input type="text" placeholder="Search for a product" />;
   }
 }
