@@ -6,6 +6,7 @@
   </head>
   <body>
     <h1>App Store</h1>
+    <div id="example"></div>
   </body>
   <script type="text/javascript">
     window.APP_GLOBALS = {
