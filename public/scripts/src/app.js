@@ -1,10 +1,8 @@
-'use strict';
-
-let ALGOLIA_APP_ID = window.APP_GLOBALS.ALGOLIA_APP_ID;
-let ALGOLIA_SEARCH_ONLY_KEY = window.APP_GLOBALS.ALGOLIA_SEARCH_ONLY_KEY;
+const ALGOLIA_APP_ID = window.APP_GLOBALS.ALGOLIA_APP_ID;
+const ALGOLIA_SEARCH_ONLY_KEY = window.APP_GLOBALS.ALGOLIA_SEARCH_ONLY_KEY;
 import algoliasearch from 'algoliasearch';
-let client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_ONLY_KEY);
-let index = client.initIndex('app_store');
+const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_ONLY_KEY);
+const index = client.initIndex('app_store');
 import React from 'react';
 
 index
@@ -16,5 +14,5 @@ index
 
 React.render(
   <h1>Hello, React!</h1>,
-  document.getElementById('example')
+  document.getElementsByClassName('js-app')[0]
 );

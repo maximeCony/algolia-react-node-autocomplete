@@ -1,9 +1,8 @@
-'use strict';
+const express = require('express');
+const app = module.exports = express();
+const dustjs = require('adaro');
+const isProduction = process.env.NODE_ENV === 'production';
 
-let express = require('express');
-let app = module.exports = express();
-let dustjs = require('adaro');
-let isProduction = process.env.NODE_ENV === 'production';
 app.set('port', process.env.PORT);
 
 app.use('/public', express.static(__dirname + '/public'));
@@ -16,7 +15,7 @@ app.set('view engine', 'dust');
 app.set('views', __dirname + '/server/views');
 
 // routes
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
