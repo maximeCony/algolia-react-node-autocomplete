@@ -4,6 +4,7 @@ import algoliasearch from 'algoliasearch';
 const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_ONLY_KEY);
 const index = client.initIndex('app_store');
 import React from 'react';
+import FilterableProductTable from './components/FilterableProductTable';
 
 index
   .search('book')
@@ -13,6 +14,6 @@ index
   .catch(console.error);
 
 React.render(
-  <h1>Hello, React!</h1>,
+  <FilterableProductTable />,
   document.getElementsByClassName('js-app')[0]
 );
