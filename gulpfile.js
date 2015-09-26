@@ -1,12 +1,21 @@
 'use strict';
 
 let gulp = require('gulp');
-let babel = require('gulp-babel');
+let browserify = require('browserify');
+let babelify = require('babelify');
+let source = require('vinyl-source-stream');
+let buffer = require('vinyl-buffer');
 
 gulp.task('scripts', function () {
-  return gulp.src('public/scripts/src/app.js')
-    .pipe(babel())
-    .pipe(gulp.dest('public/scripts/dist'));
+  let b = browserify({
+    entries: './public/scripts/src/app.js',
+    debug: true,
+    transform: [babelify]
+  });
+  return b.bundle()
+    .pipe(source('app.js'))
+    .pipe(buffer())
+    .pipe(gulp.dest('./public/scripts/dist'));
 });
 
 gulp.task('watch', function() {

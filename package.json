@@ -8,8 +8,12 @@
   "dependencies": {
     "adaro": "^1.0.0",
     "algoliasearch": "^3.8.1",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.1"
+    "gulp-babel": "^5.2.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
