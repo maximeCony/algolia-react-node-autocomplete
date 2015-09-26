@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>App Store</title>
+  </head>
+  <body>
+    <h1>App Store</h1>
+  </body>
+  <script type="text/javascript">
+    window.APP_GLOBALS = {
+      ALGOLIA_APP_ID: '{APP_GLOBALS.ALGOLIA_APP_ID}',
+      ALGOLIA_SEARCH_ONLY_KEY: '{APP_GLOBALS.ALGOLIA_SEARCH_ONLY_KEY}',
+    };
+  </script>
+  <script src="/public/scripts/dist/app.js" charset="utf-8"></script>
+</html>
