@@ -5,3 +5,4 @@ React.render(
   <AutocompleteProducts />,
   document.getElementsByClassName('js-app')[0]
 );
+document.getElementsByClassName('searchInput')[0].focus();

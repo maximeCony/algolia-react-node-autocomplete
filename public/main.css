@@ -2,6 +2,13 @@ html, body{
   font-family: 'Roboto', sans-serif;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 h1 {
   display: inline;
   margin-right: 0.5em;
@@ -17,6 +24,7 @@ h1 {
 }
 
 .searchInput {
+  padding-left: 0.5em;
   height: 2em;
   width: 100%;
   font-size: 1.1em;
