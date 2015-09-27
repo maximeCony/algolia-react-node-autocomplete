@@ -11,7 +11,7 @@ export default class ProductCategoryRow extends React.Component {
 
   render() {
     const rows = this.props.products
-      .map((product) => <ProductRow product={product} />);
+      .map((product) => <ProductRow product={product} onSelect={this.props.onSelect} />);
     return (
       <div className="category">
         <h4 dangerouslySetInnerHTML={this.rawCategory()} />

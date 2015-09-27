@@ -14,7 +14,13 @@ export default class ProductList extends React.Component {
       }
     });
     const rows = categories.map((category) => {
-      return <ProductCategoryRow category={category} products={products[category]}/>;
+      return (
+        <ProductCategoryRow
+          category={category}
+          products={products[category]}
+          onSelect={this.props.onSelect}
+        />
+      );
     });
     return <div className="products">{rows}</div>;
   }

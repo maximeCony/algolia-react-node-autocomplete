@@ -29,11 +29,24 @@ export default class AutocompleteProducts extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  handleSelect(product) {
+    this.setState({
+      query: product.name,
+      products: [],
+    });
+  }
+
   render() {
     return (
       <div className="autocomplete">
-        <SearchBar query={this.state.query} onUserInput={this.handleUserInput.bind(this)}/>
-        <ProductList products={this.state.products} />
+        <SearchBar
+          query={this.state.query}
+          onUserInput={this.handleUserInput.bind(this)}
+        />
+        <ProductList
+          products={this.state.products}
+          onSelect={this.handleSelect.bind(this)}
+        />
       </div>
     );
   }

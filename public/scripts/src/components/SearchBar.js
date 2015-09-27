@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class SearchBar extends React.Component {
 
-  handleKeyUp() {
+  handleChange() {
     this.props.onUserInput(
       this.refs.searchQueryInput.getDOMNode().value
     );
@@ -15,8 +15,8 @@ export default class SearchBar extends React.Component {
         type="text"
         placeholder="Search for an App"
         ref="searchQueryInput"
-        defaultValue={this.props.query}
-        onKeyUp={this.handleKeyUp.bind(this)}
+        value={this.props.query}
+        onChange={this.handleChange.bind(this)}
       />
     );
   }
