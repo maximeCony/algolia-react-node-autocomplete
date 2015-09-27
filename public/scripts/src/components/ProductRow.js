@@ -1,12 +1,20 @@
 import React from 'react';
 
 export default class ProductCategoryRow extends React.Component {
+
+  rawName() {
+    return {
+      __html: this.props.product._highlightResult.name.value,
+    };
+  }
+
   render() {
     return (
       <li>
         <img src={this.props.product.image} alt="Product Image" />
-        <span>{this.props.product.name}</span>
+        <span dangerouslySetInnerHTML={this.rawName()} />
       </li>
     );
   }
+
 }
