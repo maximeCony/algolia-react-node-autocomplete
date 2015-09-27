@@ -11,8 +11,9 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <input
+        className="searchInput"
         type="text"
-        placeholder="Search for a product"
+        placeholder="Search for an App"
         ref="searchQueryInput"
         defaultValue={this.props.query}
         onKeyUp={this.handleKeyUp.bind(this)}

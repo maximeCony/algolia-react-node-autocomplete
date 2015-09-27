@@ -31,7 +31,7 @@ export default class AutocompleteProducts extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="autocomplete">
         <SearchBar query={this.state.query} onUserInput={this.handleUserInput.bind(this)}/>
         <ProductList products={this.state.products} />
       </div>

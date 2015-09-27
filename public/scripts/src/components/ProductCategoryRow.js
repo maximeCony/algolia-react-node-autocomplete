@@ -2,13 +2,20 @@ import React from 'react';
 import ProductRow from './ProductRow';
 
 export default class ProductCategoryRow extends React.Component {
+
+  rawCategory() {
+    return {
+      __html: this.props.products[0]._highlightResult.category.value,
+    };
+  }
+
   render() {
     const rows = this.props.products
       .map((product) => <ProductRow product={product} />);
     return (
       <div className="category">
-        <div>{this.props.category}</div>
-        <ul>{rows}</ul>
+        <h4 dangerouslySetInnerHTML={this.rawCategory()} />
+        <div className="products-by-category">{rows}</div>
       </div>
     );
   }

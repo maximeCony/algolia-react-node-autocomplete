@@ -10,10 +10,10 @@ export default class ProductCategoryRow extends React.Component {
 
   render() {
     return (
-      <li>
+      <div className="product">
         <img src={this.props.product.image} alt="Product Image" />
         <span dangerouslySetInnerHTML={this.rawName()} />
-      </li>
+      </div>
     );
   }
 
