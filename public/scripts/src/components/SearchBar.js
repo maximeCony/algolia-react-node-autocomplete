@@ -6,19 +6,19 @@ const keyCodeEnter = 13;
 export default class SearchBar extends React.Component {
 
   handleChange() {
-    this.props.onUserInput(
-      this.refs.searchQueryInput.getDOMNode().value
-    );
+    this.props.onUserInput(this.refs.searchQueryInput.getDOMNode().value);
   }
 
   handleKeyDown(event) {
     switch (event.keyCode) {
-      case keyCodeUp:
+    case keyCodeUp:
       return this.props.onMoveSelection('up');
-      case keyCodeDown:
+    case keyCodeDown:
       return this.props.onMoveSelection('down');
-      case keyCodeEnter:
+    case keyCodeEnter:
       return this.props.onPressEnter();
+    default:
+      // http://eslint.org/docs/rules/default-case.html
     }
   }
 
@@ -37,3 +37,12 @@ export default class SearchBar extends React.Component {
   }
 
 }
+
+SearchBar.propTypes = {
+  onUserInput: React.PropTypes.func,
+  onMoveSelection: React.PropTypes.func,
+  onPressEnter: React.PropTypes.func,
+  query: React.PropTypes.string,
+};
+
+export default SearchBar;

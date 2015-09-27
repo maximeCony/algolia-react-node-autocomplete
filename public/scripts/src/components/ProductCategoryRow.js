@@ -26,3 +26,11 @@ export default class ProductCategoryRow extends React.Component {
     );
   }
 }
+
+ProductCategoryRow.propTypes = {
+  products: React.PropTypes.array,
+  onSelect: React.PropTypes.func,
+  selected: React.PropTypes.object,
+};
+
+export default ProductCategoryRow;
