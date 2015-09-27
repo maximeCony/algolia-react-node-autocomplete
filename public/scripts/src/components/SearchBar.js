@@ -29,7 +29,7 @@ export default class SearchBar extends React.Component {
         type="text"
         placeholder="Search for an App"
         ref="searchQueryInput"
-        value={this.props.query}
+        defaultValue={this.props.query}
         onChange={this.handleChange.bind(this)}
         onKeyDown={this.handleKeyDown.bind(this)}
       />
