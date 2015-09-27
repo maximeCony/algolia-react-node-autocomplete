@@ -26,8 +26,14 @@ h1 {
 .searchInput {
   padding-left: 0.5em;
   height: 2em;
-  width: 100%;
+  width: 98%;
   font-size: 1.1em;
+  border: solid 1px grey;
+  border-bottom: none;
+}
+
+.searchInput:focus {
+  border-bottom: solid 1px grey;;
 }
 
 .category h4 {
