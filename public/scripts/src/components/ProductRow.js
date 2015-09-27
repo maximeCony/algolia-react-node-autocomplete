@@ -9,6 +9,7 @@ export default class ProductCategoryRow extends React.Component {
   }
 
   handleClick() {
+    // onMouseDown is used instead of onClick because it fire before onBlur
     this.props.onSelect(this.props.product);
   }
 
@@ -20,7 +21,7 @@ export default class ProductCategoryRow extends React.Component {
       classes += ' selected';
     }
     return (
-      <div className={classes} onClick={this.handleClick.bind(this)}>
+      <div className={classes} onMouseDown={this.handleClick.bind(this)}>
         <img src={this.props.product.image} alt="Product Image" />
         <span dangerouslySetInnerHTML={this.rawName()} />
       </div>

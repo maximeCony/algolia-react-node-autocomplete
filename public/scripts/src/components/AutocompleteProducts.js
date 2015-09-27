@@ -22,6 +22,17 @@ export default class AutocompleteProducts extends React.Component {
   }
 
   handleUserInput(query) {
+    const trimmedQUery = query.trim();
+    if (!trimmedQUery) {
+      return this.setState({
+        query,
+        products: [],
+        selected: {
+          current: 0,
+          idx: 0,
+        },
+      });
+    }
     index
       .search(query)
       .then((res) => {
@@ -68,9 +79,19 @@ export default class AutocompleteProducts extends React.Component {
     }
   }
 
+  handleBlur() {
+    this.setState({
+      products: [],
+      selected: {
+        current: 0,
+        idx: 0,
+      },
+    });
+  }
+
   render() {
     return (
-      <div className="autocomplete">
+      <div className="autocomplete" onBlur={this.handleBlur.bind(this)}>
         <SearchBar
           query={this.state.query}
           onUserInput={this.handleUserInput.bind(this)}

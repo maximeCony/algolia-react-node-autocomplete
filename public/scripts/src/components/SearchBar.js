@@ -22,6 +22,10 @@ export default class SearchBar extends React.Component {
     }
   }
 
+  handleFocus() {
+    this.props.onUserInput(this.refs.searchQueryInput.getDOMNode().value);
+  }
+
   render() {
     return (
       <input
@@ -32,6 +36,7 @@ export default class SearchBar extends React.Component {
         defaultValue={this.props.query}
         onChange={this.handleChange.bind(this)}
         onKeyDown={this.handleKeyDown.bind(this)}
+        onFocus={this.handleFocus.bind(this)}
       />
     );
   }
@@ -42,6 +47,7 @@ SearchBar.propTypes = {
   onUserInput: React.PropTypes.func,
   onMoveSelection: React.PropTypes.func,
   onPressEnter: React.PropTypes.func,
+  onSearchBlur: React.PropTypes.func,
   query: React.PropTypes.string,
 };
 

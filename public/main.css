@@ -43,10 +43,11 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   padding: 5px;
+  cursor: pointer;
 }
 
 .product.selected {
-  background-color: green;
+  background-color: #54F67F;
 }
 
 .product img {
@@ -59,14 +60,14 @@ h1 {
 .product span em,
 .category h4 em {
   font-weight: bold;
-  color: red;
+  color: #FF6B58;
   font-style: normal;
 }
 
 .products {
   position: absolute;
   width: 100%;
-   background-color: white;
+  background-color: white;
   border-style: solid;
   border-width: 1px;
   border-color: grey;
