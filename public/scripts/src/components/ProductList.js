@@ -13,9 +13,10 @@ export default class ProductList extends React.Component {
         products[product.category].push(product);
       }
     });
-    const rows = categories.map((category) => {
+    const rows = categories.map((category, idx) => {
       return (
         <ProductCategoryRow
+          selected={this.props.selected}
           category={category}
           products={products[category]}
           onSelect={this.props.onSelect}

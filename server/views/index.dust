@@ -9,6 +9,14 @@
   <body>
     <h1>App Store</h1>
     <div id="app" class="js-app"></div>
+    <h4>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id mi ac ligula eleifend venenatis et quis ex.
+      Morbi blandit feugiat mattis. Fusce congue sed urna et pulvinar. Sed vitae efficitur ante, sed imperdiet libero.
+      Sed iaculis odio sed pulvinar feugiat. Proin ut purus magna. Nam nibh arcu, sagittis at bibendum vel,
+      pellentesque nec dolor. Morbi aliquam iaculis neque et faucibus. Pellentesque non dictum nunc, vitae pellentesque leo.
+      Quisque id suscipit justo, vitae suscipit augue. Vivamus a urna et arcu semper ultricies.
+      Vestibulum mattis orci id dolor volutpat eleifend. Nam maximus neque turpis, id laoreet sapien hendrerit at.
+    </h4>
   </body>
   <script type="text/javascript">
     window.APP_GLOBALS = {

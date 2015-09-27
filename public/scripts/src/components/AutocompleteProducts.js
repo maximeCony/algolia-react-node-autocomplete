@@ -14,6 +14,10 @@ export default class AutocompleteProducts extends React.Component {
     this.state = {
       query: '',
       products: [],
+      selected: {
+        current: 0,
+        idx: 0,
+      },
     };
   }
 
@@ -24,6 +28,10 @@ export default class AutocompleteProducts extends React.Component {
         this.setState({
           query,
           products: res.hits,
+          selected: {
+            current: 0,
+            idx: 0,
+          },
         });
       })
       .catch((err) => console.error(err));
@@ -33,7 +41,30 @@ export default class AutocompleteProducts extends React.Component {
     this.setState({
       query: product.name,
       products: [],
+      selected: {
+        current: 0,
+        idx: 0,
+      },
     });
+  }
+
+  handleMoveSelection(direction) {
+    let nextIdx = this.state.selected.idx + (direction === 'up' ? -1 : 1);
+    if (nextIdx < 0 || nextIdx >= this.state.products.length) {
+      nextIdx = this.state.selected.idx;
+    }
+    this.setState({
+      selected: {
+        current: 0,
+        idx: nextIdx,
+      },
+    });
+  }
+
+  handlePressEnter() {
+    if (this.state.selected.product) {
+      this.handleSelect(this.state.selected.product);
+    }
   }
 
   render() {
@@ -42,9 +73,12 @@ export default class AutocompleteProducts extends React.Component {
         <SearchBar
           query={this.state.query}
           onUserInput={this.handleUserInput.bind(this)}
+          onMoveSelection={this.handleMoveSelection.bind(this)}
+          onPressEnter={this.handlePressEnter.bind(this)}
         />
         <ProductList
           products={this.state.products}
+          selected={this.state.selected}
           onSelect={this.handleSelect.bind(this)}
         />
       </div>
