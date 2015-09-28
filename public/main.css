@@ -37,7 +37,11 @@ h1 {
 }
 
 .category h4 {
-  margin: 2px;
+  background-color: #EFEFEF;
+  padding: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
 .products-by-category {
@@ -45,15 +49,15 @@ h1 {
 }
 
 .product {
-  margin-bottom: 4px;
   overflow: hidden;
   white-space: nowrap;
   padding: 5px;
   cursor: pointer;
+  margin: 0;
 }
 
 .product.selected {
-  background-color: #54F67F;
+  background-color: #96F8B0;
 }
 
 .product img {
@@ -66,7 +70,7 @@ h1 {
 .product span em,
 .category h4 em {
   font-weight: bold;
-  color: #FF6B58;
+  color: #FF8B19;
   font-style: normal;
 }
 
