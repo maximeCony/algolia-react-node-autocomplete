@@ -1,6 +1,6 @@
 # Algolia React autocompletion
 
-The entry point of the client app is `/public/scripts/app.js` which load the `AutocompleteProducts` component.
+The entry point of the client app is `/public/scripts/src/app.js` which load the `AutocompleteProducts` component.
 
 ##### Tree view of the components architecture:
 + `AutocompleteProducts`
@@ -21,7 +21,7 @@ The entry point of the client app is `/public/scripts/app.js` which load the `Au
 + Use of SAS or Less for the css
 
 ## Gulp File
-Compile ES6 code into ES5
+Compile ES6 code from `/public/scripts/src/app.js` to ES5 code in `/public/scripts/dist/app.js`
 
 ## Linter
 [ESLint](http://eslint.org/) with built in jsx support.
