@@ -23,7 +23,7 @@ h1 {
   width: 500px;
 }
 
-.searchInput {
+.search-input {
   padding-left: 0.5em;
   height: 2em;
   width: 98%;
@@ -32,7 +32,7 @@ h1 {
   border-bottom: none;
 }
 
-.searchInput:focus {
+.search-input:focus {
   border-bottom: solid 1px grey;;
 }
 

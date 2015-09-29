@@ -29,7 +29,7 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <input
-        className="searchInput"
+        className="search-input js-searchInput"
         type="text"
         placeholder="Search for an App"
         ref="searchQueryInput"
@@ -50,5 +50,3 @@ SearchBar.propTypes = {
   onSearchBlur: React.PropTypes.func,
   query: React.PropTypes.string,
 };
-
-export default SearchBar;

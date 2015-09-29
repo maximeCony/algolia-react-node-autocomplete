@@ -49,7 +49,7 @@ export default class AutocompleteProducts extends React.Component {
   }
 
   handleSelect(product) {
-    document.getElementsByClassName('searchInput')[0].value = product.name;
+    document.getElementsByClassName('js-searchInput')[0].value = product.name;
     this.setState({
       query: product.name,
       products: [],

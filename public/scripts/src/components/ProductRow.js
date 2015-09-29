@@ -35,5 +35,3 @@ ProductCategoryRow.propTypes = {
   onSelect: React.PropTypes.func,
   selected: React.PropTypes.object,
 };
-
-export default ProductCategoryRow;

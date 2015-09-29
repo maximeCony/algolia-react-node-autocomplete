@@ -32,5 +32,3 @@ ProductList.propTypes = {
   onSelect: React.PropTypes.func,
   selected: React.PropTypes.object,
 };
-
-export default ProductList;
