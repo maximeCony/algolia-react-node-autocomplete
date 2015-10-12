@@ -1,2 +1,2 @@
 web: nodemon index.js --watch server --watch index.js
-gulp: node node_modules/.bin/gulp default watch
+gulp: gulp default watch
